@@ -16,7 +16,7 @@ public class SenderManager {
         if (senderManager == null) {
             synchronized (SenderManager.class) {
                 if (senderManager == null) {
-                    senderManager = new SenderManager(1);
+                    senderManager = new SenderManager(0);
                 }
             }
         }
@@ -31,7 +31,7 @@ public class SenderManager {
         if (sender != null) {
             return sender;
         } else {
-            sender = createSender(1);
+            sender = createSender(0);
             return sender;
         }
     }
