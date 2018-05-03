@@ -115,8 +115,8 @@
        include $(CLEAR_VARS)
        
        TARGET_PLATFORM := android-3
-       LOCAL_MODULE    := serial_port
-       LOCAL_SRC_FILES := SerialPort.c
+       LOCAL_MODULE    := serial_port      //项目名称
+       LOCAL_SRC_FILES := SerialPort.c     //底层c
        LOCAL_LDLIBS    := -llog
        
        include $(BUILD_SHARED_LIBRARY)
