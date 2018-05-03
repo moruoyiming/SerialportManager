@@ -120,6 +120,8 @@
        LOCAL_LDLIBS    := -llog
        
        include $(BUILD_SHARED_LIBRARY)
+       
+   在main目录下创建一个jni文件目录，并将 Android.mk 文件放到jni文件下
    
    
    直接使用网上 SerialPort.java 类，里边封装底层方法
@@ -237,4 +239,6 @@
       }
       #endif
       #endif
-
+   
+   
+   并把 SerialPort.h 头文件转移到jni文件夹下
