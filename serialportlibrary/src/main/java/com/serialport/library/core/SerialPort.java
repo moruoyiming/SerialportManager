@@ -25,6 +25,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
+ * Created by Jian on 2017/8/7.
  * 用来加载SO文件，通过JNI的方式打开关闭串口
  */
 public class SerialPort {

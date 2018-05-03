@@ -6,9 +6,8 @@ import com.serialport.library.protocol.OldSerialPortScreenProtocol;
 import com.serialport.library.protocol.SerialPortProtocol;
 
 /**
- * Created by zhikang on 2017/11/27.
+ * Created by Jian on 2017/8/7.
  */
-
 public class OldScreenSender implements Sender {
     @Override
     public void sendScreenStandby(String sn) {

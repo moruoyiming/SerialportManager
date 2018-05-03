@@ -7,7 +7,7 @@ import com.serialport.library.protocol.SerialPortScreenProtocol;
 import com.serialport.library.protocol.SerialPortScreenProtocol2;
 
 /**
- * Created by zhikang on 2017/11/27.
+ * Created by Jian on 2017/8/7.
  */
 
 public class AdapterSender implements Sender {

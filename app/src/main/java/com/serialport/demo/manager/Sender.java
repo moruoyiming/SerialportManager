@@ -1,7 +1,7 @@
 package com.serialport.demo.manager;
 
 /**
- * Created by zhikang on 2017/11/27.
+ * Created by Jian on 2017/8/7.
  */
 
 public interface Sender {

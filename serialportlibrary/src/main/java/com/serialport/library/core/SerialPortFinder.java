@@ -25,11 +25,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 /**
- * 项目名称：HealthDetectLecon
- * 类描述：获取设备所有串口
- * 创建人：jianz
- * 创建时间：2017/3/2 15:27
- * 修改备注：
+ * Created by Jian on 2017/8/7.
  */
 public class SerialPortFinder {
 

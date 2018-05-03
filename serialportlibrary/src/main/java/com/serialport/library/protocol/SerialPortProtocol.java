@@ -3,7 +3,7 @@ package com.serialport.library.protocol;
 import java.util.Arrays;
 
 /**
- * Created by zhikang on 2017/8/7.
+ * Created by Jian on 2017/8/7.
  */
 
 public class SerialPortProtocol extends BaseProtocol {

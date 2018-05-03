@@ -4,7 +4,7 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 
 /**
- * Created by DJP on 2017/2/22.
+ * Created by Jian on 2017/8/7.
  */
 public class SerialPortScreenProtocol2 extends BaseProtocol {
     //显示界面指令的基础协议，其中第4、5个字节为界面编号，

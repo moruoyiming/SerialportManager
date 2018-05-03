@@ -13,7 +13,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
 
-
+/**
+ * Created by Jian on 2017/8/7.
+ */
 public class SerialportManager {
     private String TAG = SerialportManager.class.getSimpleName();
     private SerialPort mSerialPort;

@@ -14,7 +14,10 @@ import com.serialport.demo.manager.SenderManager;
 import com.serialport.library.SerialportManager;
 import com.serialport.library.listener.OnS3DataReceiverListener;
 import com.serialport.library.listener.OnS6DataReceiverListener;
-
+import com.serialport.library.utils.TypeConversion;
+/**
+ * Created by Jian on 2017/8/7.
+ */
 public class MainActivity extends AppCompatActivity implements OnS3DataReceiverListener,OnS6DataReceiverListener {
 
     @Override

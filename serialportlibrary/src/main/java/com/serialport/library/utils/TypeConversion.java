@@ -1,13 +1,9 @@
-package com.serialport.demo;
+package com.serialport.library.utils;
 
 import android.util.Log;
 
 /**
- * 项目名称：HealthDetectLecon
- * 类描述：
- * 创建人：jianz
- * 创建时间：2017/2/22 10:05
- * 修改备注：
+ * Created by Jian on 2017/8/7.
  */
 public class TypeConversion {
 

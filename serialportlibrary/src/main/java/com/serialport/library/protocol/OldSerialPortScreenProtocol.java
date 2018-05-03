@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by DJP on 2017/2/22.
+ * Created by Jian on 2017/8/7.
  */
 public class OldSerialPortScreenProtocol {
     //显示界面指令的基础协议，其中第4、5个字节为界面编号，

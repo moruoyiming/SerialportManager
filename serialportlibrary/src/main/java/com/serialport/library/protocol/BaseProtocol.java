@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by zhikang on 2017/8/7.
+ * Created by Jian on 2017/8/7.
  */
 
 public class BaseProtocol {

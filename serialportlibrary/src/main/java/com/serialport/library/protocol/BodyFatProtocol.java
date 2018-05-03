@@ -3,9 +3,8 @@ package com.serialport.library.protocol;
 import java.util.Arrays;
 
 /**
- * Created by zhikang on 2017/8/10.
+ * Created by Jian on 2017/8/7.
  */
-
 public class BodyFatProtocol extends BaseProtocol {
 
     private static byte[] baseStart = {(byte) 0xA5, (byte) 0x5A};
