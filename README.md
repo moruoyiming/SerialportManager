@@ -436,3 +436,5 @@
         close(descriptor);
     }
     
+    
+   ## 到此 NDK 项目搭建完成。接下来 介绍一下 SerialPortManager 类库
