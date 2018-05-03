@@ -1,8 +1,9 @@
 # SerialportManager
-##串口通讯库 serialport开发封装
+
+## 串口通讯库 serialport开发封装
 
 
-  ###前言
+  ### 前言
  
   最近工作比较清闲，闲来无事，把原先项目用到的串口通讯项目所涉及到的知识及项目简化出来一个库，方便以后开发新项目。同时希望
    
@@ -29,11 +30,24 @@
   
   当然还有其他的优点，这些都驱使我们选择相对来说高效和安全的DNK来开发我们的应用程序。
   
-  ###NDK环境搭建
+  ### NDK环境搭建
   
   1.安装配置NDK
   
    首先下载NDK，可以从AndroidStudio中的SDK Manager中下载，也可自己单独下载
+   
+   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-151610%402x.png)
+   
+   点击按钮进入 
+   
+   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-151818%402x.png)
+   
+   
+   或者进入http://www.androiddevtools.cn/ 下载
+   
+   [Windows 64-bit](https://dl.google.com/android/repository/android-ndk-r16-beta1-windows-x86_64.zip?utm_source=androiddevtools&utm_medium=website?raw=true)
+   
+   [Mac OS X](https://dl.google.com/android/repository/android-ndk-r16-beta1-darwin-x86_64.zip?utm_source=androiddevtools&utm_medium=website?raw=true)
    
   
   
