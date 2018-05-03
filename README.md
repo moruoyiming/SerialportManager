@@ -279,66 +279,9 @@
         switch (baudrate) {
             case 0:
                 return B0;
-            case 50:
-                return B50;
-            case 75:
-                return B75;
-            case 110:
-                return B110;
-            case 134:
-                return B134;
-            case 150:
-                return B150;
-            case 200:
-                return B200;
-            case 300:
-                return B300;
-            case 600:
-                return B600;
-            case 1200:
-                return B1200;
-            case 1800:
-                return B1800;
-            case 2400:
-                return B2400;
-            case 4800:
-                return B4800;
-            case 9600:
-                return B9600;
-            case 19200:
-                return B19200;
-            case 38400:
-                return B38400;
-            case 57600:
-                return B57600;
-            case 115200:
-                return B115200;
-            case 230400:
-                return B230400;
-            case 460800:
-                return B460800;
-            case 500000:
-                return B500000;
-            case 576000:
-                return B576000;
-            case 921600:
-                return B921600;
-            case 1000000:
-                return B1000000;
-            case 1152000:
-                return B1152000;
-            case 1500000:
-                return B1500000;
-            case 2000000:
-                return B2000000;
-            case 2500000:
-                return B2500000;
-            case 3000000:
-                return B3000000;
-            case 3500000:
-                return B3500000;
-            case 4000000:
-                return B4000000;
+                
+                ...
+                
             default:
                 return -1;
         }
@@ -438,3 +381,17 @@
     
     
    ## 到此 NDK 项目搭建完成。接下来 介绍一下 SerialPortManager 类库
+   
+   下图为类库的介绍
+   
+   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-181007%402x.png)
+
+   SerialPort.java
+   
+   SerialPortFinder.java
+   
+   OnS3DataReceiverListener.java 和 OnS6DataReceiverListener.java 是串口响应数据监听。当接收到串口数据会调
+   
+   接口方法，我们的硬件设备S3口监听主板数据，S6口监听硬件屏幕数据。
+   
+   BaseProtocol.java 提供指令封装方法。根据各个设备硬件串口协议，继承、封装。
