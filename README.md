@@ -32,7 +32,7 @@
   
   ### NDK环境搭建
   
-  1.下载NDK
+  #### 1.下载NDK
   
    首先下载NDK，可以从AndroidStudio中的SDK Manager中下载，也可自己单独下载
    
@@ -51,13 +51,13 @@
    
    如单独下载
   
-   1). 解压NDK的zip包，注意路径目录不要出现空格和中文，这里建议大家把包解压到SDK目录里面，并命名为ndk-bundle，好处是，启动AS的时候会检查它并直接添加到ndk.dir中，减少我们的配置工作；
+    1). 解压NDK的zip包，注意路径目录不要出现空格和中文，这里建议大家把包解压到SDK目录里面，并命名为ndk-bundle，好处是，启动AS的时候会检查它并直接添加到ndk.dir中，减少我们的配置工作；
    
-   2). 配置path : 把解压好的路径添加到环境变量path中；
+    2). 配置path : 把解压好的路径添加到环境变量path中；
    
-   3). ndk-build：cd到解压后NDK的根目录，执行ndk-build命令。
+    3). ndk-build：cd到解压后NDK的根目录，执行ndk-build命令。
    
-   2.安装配置NDK
+   #### 2.安装配置NDK
    
    AndroidStudio 点击File -> Other Settings -> Default Project Strjucture  如图
    
