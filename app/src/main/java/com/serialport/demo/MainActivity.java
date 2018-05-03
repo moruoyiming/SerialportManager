@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements OnS3DataReceiverL
         SerialportManager.getInstance().setOnS3DataReceiverListener(this);
         SerialportManager.getInstance().setOnS6DataReceiverListener(this);
         SerialportManager.getInstance().InitThread();
-        SenderManager.getInstance().getSender().sendCheckDeviceHead();
-        SenderManager.getInstance().getSender().sendScreenError("配置成功");
         SenderManager.getInstance().getSender().sendStartDetect();
     }
 
