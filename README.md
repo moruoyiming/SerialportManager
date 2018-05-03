@@ -92,7 +92,7 @@
    
    ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-164512%402x.png)
    
-   Android.mk 文件中配置如下内容
+   Android.mk 文件中配置如下内容   [Android.mk用法详解](https://www.cnblogs.com/reality-soul/p/6893248.html)
    
        #
        # Copyright 2009 Cedric Priscal
