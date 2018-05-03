@@ -61,9 +61,9 @@
    
    AndroidStudio 点击File -> Other Settings -> Default Project Strjucture  如图
    
-   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-151818%402x.png)
+   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-155357%402x.png)
    
-   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-151818%402x.png)
+   ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-155822%402x.png)
    
   
   
