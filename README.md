@@ -386,7 +386,7 @@
    
    ![image](https://github.com/moruoyiming/SerialportManager/blob/master/pics/QQ20180503-181007%402x.png)
 
-   SerialPort.java
+   [SerialPort.java](https://github.com/moruoyiming/SerialportManager/blob/master/serialportlibrary/src/main/java/com/serialport/library/core/SerialPort.java)  封装底层开关串口方法
    
    SerialPortFinder.java
    
