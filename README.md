@@ -395,3 +395,56 @@
    接口方法，我们的硬件设备S3口监听主板数据，S6口监听硬件屏幕数据。
    
    [BaseProtocol.java](https://github.com/moruoyiming/SerialportManager/blob/master/serialportlibrary/src/main/java/com/serialport/library/protocol/BaseProtocol.java) 提供指令封装方法。根据各个设备硬件串口协议，继承、封装。
+   
+   [SerialportManager.java](https://github.com/moruoyiming/SerialportManager/blob/master/serialportlibrary/src/main/java/com/serialport/library/SerialportManager.java)  串口管理对象
+   
+   
+   
+   ## SerialportManager.java
+   
+   串口管理对象，该对象为单例。底层对 SerialPort  进行封装、管理。
+   
+        private SerialPort mSerialPort; 
+       
+        mSerialPort = new SerialPort(new File(path), baudrate, 0);//根据串口名，波特率 生成串口管理对象
+                   
+        mOutputStream = mSerialPort.getOutputStream(); //获取串口的输出流
+                   
+        mInputStream = mSerialPort.getInputStream();  //获取串口的输入流
+        
+   开启一个新线程循环读取串口信息
+   
+          if (mReadThread == null) {
+               mReadThread = new ReadThread();
+               mReadThread.start();
+          }
+          
+   线程方法中通过输入流获取串口数据 返回数据为byte数组，当获取到数据回调 onS3DataReceiverListener 接口方法
+         
+    private class ReadThread extends Thread {
+
+        @Override
+        public void run() {
+            super.run();
+            while (!isStop && !isInterrupted()) {
+                int size;
+                try {
+                    if (mInputStream == null) {
+                        return;
+                    }
+                    byte[] buffer = new byte[64];
+                    size = mInputStream.read(buffer);
+                    if (size > 0) {
+                        if (null != onS3DataReceiverListener) {
+                            onS3DataReceiverListener.onS3DataReceive(buffer, size);
+                        }
+                    }
+                    Thread.sleep(10);
+                } catch (Exception e) {
+                    Log.i("readthread", "throw exception !" + e.toString());
+                    e.printStackTrace();
+                    return;
+                }
+            }
+        }
+    }
