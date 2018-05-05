@@ -1,6 +1,7 @@
 package com.serialport.demo;
 
 import android.os.Bundle;
+import android.os.Debug;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements OnS3DataReceiverL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Debug.startMethodTracing("GithubApp");
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements OnS3DataReceiverL
         SerialportManager.getInstance().setOnS6DataReceiverListener(this);
         SerialportManager.getInstance().InitThread();
         SenderManager.getInstance().getSender().sendStartDetect();
+        Debug.stopMethodTracing();
     }
 
     @Override
