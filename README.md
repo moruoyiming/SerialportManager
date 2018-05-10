@@ -448,3 +448,35 @@
             }
         }
     }
+    
+    
+  下面介绍一下如何使用类库，我们项目串口用的是S3、S6口，如果想用其他串口 请修改SerialportManager中的path/screenpath
+  如果baudrate也想改也修改对应的数值即可。
+    
+           SerialportManager.getInstance().setOnS3DataReceiverListener(this);//设置主板串口回调
+           SerialportManager.getInstance().setOnS6DataReceiverListener(this);//设置屏幕串口回调
+           SerialportManager.getInstance().InitThread();//初始化对应 读写线程
+           //因有不同主板类型，屏幕类型。这里对其做了一次封装
+           SenderManager.getInstance().getSender().sendStartDetect();
+  
+    设备开机会轮训配置串口，根据主板类型屏幕类型，生成对应管理对象。然后进行串口数据通讯。当我们串口读到我们的输入数据，会
+    想onS3DataReceiverListener.onS3DataReceive 回调返回数据。再界面我们拿到数据坐相应操作
+    
+           @Override
+             public void onS3DataReceive(byte[] buffer, int size) {
+                 byte[] mBufferTemp = new byte[size];
+                 System.arraycopy(buffer, 0, mBufferTemp, 0, size);
+                 int length = mBufferTemp.length - 1;
+                 String tempdata = TypeConversion.bytes2HexString(mBufferTemp);
+                 Log.i("serialport",tempdata);
+             }
+             
+             
+     当界面跳转时要及时将OnS3DataReceiverListener、OnS6DataReceiverListener监听remove掉，避免造成内存泄漏。
+     
+            @Override
+               protected void onPause() {
+                   super.onPause();
+                   SerialportManager.getInstance().removeOnS3DataReceiverListener();
+                   SerialportManager.getInstance().removeOnS6DataReceiverListener();
+               }

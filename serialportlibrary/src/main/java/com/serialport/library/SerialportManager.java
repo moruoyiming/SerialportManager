@@ -148,8 +148,20 @@ public class SerialportManager {
         this.onS3DataReceiverListener = onS3DataReceiverListener;
     }
 
+    public void removeOnS3DataReceiverListener() {
+        if(this.onS3DataReceiverListener!=null){
+            this.onS3DataReceiverListener=null;
+        }
+    }
+
     public void setOnS6DataReceiverListener(OnS6DataReceiverListener onS6DataReceiverListener) {
         this.onS6DataReceiverListener = onS6DataReceiverListener;
+    }
+
+    public void removeOnS6DataReceiverListener() {
+        if(this.onS6DataReceiverListener!=null){
+            this.onS6DataReceiverListener=null;
+        }
     }
 
     private class ScreenReadThread extends Thread {
